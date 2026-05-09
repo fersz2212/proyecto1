@@ -1,0 +1,33 @@
+#COMANDOS BASICOS
+docker - ver comandos que ofrece la herramienta
+docker run <imagen> - Ejecutar una imagen
+docker ps - Listar contenedores 
+	-d: arranca el contenedor en 2do plano
+	-p: Mapea un puerto del contenedor al puerto del host
+	-v: Mapea un volumen del host al contenedor
+	--name: Asigna nombre al contenedor
+	--rm: Elimina el contenedor al pararlo
+	-e: Define una variable de entorno
+	--env-file: Define un archivo de variables de entorno
+docker logs <ID> - ver que pasa dentro del contenedor
+	-f: imprime en vivo los logs 
+docker attach <ID> - volver al proceso del contenedor
+
+POLITICAS DE REINICIO
+Se definen el el comando --restart
+	no: No reinicia el contenedor
+	always: Reinicia el contenedor siempre
+	unless-stopped: Reinicia el contenedior siempre que no lo paremos
+	on-failure: Reinicia el contenedor solo si falla
+	on-failure:<n>: Reinicia el contenedor solo si falla n veces
+  
+MAPEO DE PUERTOS
+indicas al host de que puerto re-dirigir trafico al contenedor
+ejemplo: docker run -d -p 8080#puerto a abrir local:80#Puerto asociado en el contenedor <imagen>
+
+#GESTION DE CONTENEDORES
+docker exec <ID> ls - Ejecutar en el proceso principal
+	-it: Abrir terminal interactivo con el contenedor, con bash
+docker images - Listar imagenes disponibles
+docker stop <id> - Detener el contenedor
+docker container prune - Borra todos los contenedores parados

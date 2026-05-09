@@ -1,0 +1,14 @@
+>Los contenedores son instancias de una imagen, se ejecuta en un entorno aislado
+>Una imagen es un archivo binario con todos los recursos necesarios para ejecutar un contenedor
+	Esta se usa de plantilla para crear uno o multiples contenedores. Contine lo siguiente:
+	-aplicacion. Por ejemplo, una clase JAVA, entonces necesito el JDK/JRE que me permita la ejecucion, Aplicacion compilada junto a las librerias de terceros.
+	-Librerias de lenguaje. Por ejemplo, Springboot(framework de java)
+	-Paquete de SO(JDK/JRE)
+	-Configuracion. Por ejemplo, como se tiene que ejecutar la aplicacion(variables, entrypoint)
+	
+>DockerFile es un archivo de texto que contiene las instrucciones necesarias para crear una imagen. Estructura:
+	FROM <imagen base>
+	RUN instrucciones para editar imagen base. Ejemplo, por ejemplo si se quiere desplegar un servidor apache, hay queinstalar apache
+	COPY archivodelhost rutadelcontenedor
+	CMD 
+>DockerHub es un repositorio de imagenes de contenedor
