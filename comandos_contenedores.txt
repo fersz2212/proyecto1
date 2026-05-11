@@ -31,3 +31,42 @@ docker exec <ID> ls - Ejecutar en el proceso principal
 docker images - Listar imagenes disponibles
 docker stop <id> - Detener el contenedor
 docker container prune - Borra todos los contenedores parados
+
+IMAGENES
+docker pull <imagen> - Jala la imagen al almacenamiento local
+docker history <imagen> - Ver proceso de construcción de la imagen
+docker rmi <imagen> - Borrar la imagen, esta no debe ser usada
+	-f: forzar
+docker image prune - borrar imagenes no asociadas a un contenedor
+	-a: borra todas las imagenes usadas o no
+docker search <imagen> - buscar imagenes en linea de comandos
+
+CONSTRUIR IMAGEN
+
+	Estructura de un docker file
+		FROM
+
+
+docker build
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

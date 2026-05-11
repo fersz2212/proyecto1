@@ -10,5 +10,7 @@
 	FROM <imagen base>
 	RUN instrucciones para editar imagen base. Ejemplo, por ejemplo si se quiere desplegar un servidor apache, hay queinstalar apache
 	COPY archivodelhost rutadelcontenedor
-	CMD 
+	WORKDIR: Establece el directorio de trabajo por defecto para el resto de instrucciones
+	CMD: Define el comando que se ejecutara cuando se incie un contenedor a partir de la imagen
+	ENTRYPOINRT: Define el comando que se ejecutara cuando se inicie un contenedor a partir de la imagen, pero no se puede sobreescribir
 >DockerHub es un repositorio de imagenes de contenedor
